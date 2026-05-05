@@ -1,0 +1,431 @@
+@font-face {
+    font-family: neue;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+    font-family: neue;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+    font-family: neue;
+    font-weight: 200;
+    src: url(./NeueHaasDisplayRoman.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neue;
+    cursor: none;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+   /* background-color: black; */
+   position: relative;
+   z-index: 10;
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav{
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav2 h4{
+    padding: 10px 20px;
+    border: 1px solid rgba(1, 1, 1, 0.471);
+    border-radius: 50px;
+    font-weight: 500;
+    color: rgb(52, 51, 51);
+    transition: all ease 0.4s;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+#nav2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+#nav2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav2 h4 a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+#nav2 h4:hover a{
+    color: white;
+}
+#center{
+    height: 82vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #000003;
+    padding-bottom: 2.4vw;
+}
+#left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+
+#center h1{
+    font-size: 10vw;
+    text-align: right;
+    line-height: 9vw;
+}
+ #page1 video{
+    position: relative;
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 4vw;
+ }
+
+ #outer-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 90vh;
+ }
+
+ #inner-shape1{
+    background-color: #fe320a;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(15px);
+    position: absolute;
+
+ }
+ #inner-shape2{
+    background: linear-gradient(#fe320a, #fe330ad8);
+    height: 30vw;
+    width: 30vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+ }
+ #inner-shape3{
+    background: linear-gradient(#fe320a, #fe330ad8);
+    height: 30vw;
+    width: 30vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(30px);
+    position: absolute;
+    animation-name: anime3;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+ 
+
+ @keyframes anime3 {
+    from{
+        transform: translate(70%, -5%);
+    }
+    to{
+        transform: translate(10%, 40%);
+    }
+    
+ }
+
+ @keyframes anime2 {
+    from{
+        transform: translate(70%, -5%);
+    }
+    to{
+        transform: translate(-20%, 20%);
+    }
+    
+ }
+
+ /* Below this:- Explaination for moving two or more words in line */
+ #page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 8vw 0;
+    position: relative;
+ }
+
+ #moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+ }
+
+ /* To remove scrollbar */
+ #moving-text::-webkit-scrollbar{
+    display: none;    
+ }
+
+ .running-text{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 13s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+ }
+
+ #moving-text h1{
+    font-size: 10vw;
+    display: inline-block;
+ }
+
+ #big-dot{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: #fe320a;
+    display: inline-block;
+    margin: 1vw 3vw;
+ }
+
+ @keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+ }
+
+ #page2-bottom{
+    height: 90vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+ }
+
+ #page2-bottom h1{
+    font-size: 4vw;
+    width: 70%;
+    margin-left: 3vw;
+    line-height: 4vw;
+    position: relative;
+    z-index: 9;
+ }
+
+ #page2-bottom-right{
+    width: 20%;
+ }
+
+ #page2-bottom-right img{
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 10vw;
+ }
+ 
+ #page2-bottom-right p{
+    font-weight: 200;
+    margin-top: 2vw;
+    text-align: justify;
+ }
+ #page2 #circle{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(#fe320a, #fe4f0a);
+    top: 55%;
+    left: 30%;
+    filter: blur(30px);
+    animation-name: movecircle;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+ }
+
+ #page2 h5{
+   font-size: 1vw;
+   margin-left: 1vw;
+   font-weight: 200;
+   white-space: nowrap;
+ }
+
+ #circle-1{
+   height: 8px;
+   width: 8px;
+   border-radius: 50%;
+   background-color: #fe320a;
+   position: absolute;
+   margin: 1vw 2vw;
+   display: flex;
+   align-items: center;
+   white-space: nowrap;
+}
+
+ @keyframes movecircle {
+    from{
+        transform: translate(10%, -10%) skew(0);
+    }
+    to{
+        transform: translate(-10%, 10%) skew(-10deg);
+    }
+    
+ }
+
+ #page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 4vw 0;
+ }
+ .elem{
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid #666666;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+ }
+
+ .elem h2{
+    font-size: 3.5vw;
+    position: relative;
+    z-index: 9;
+ }
+
+ .elem .overlay{
+   height: 100%;
+   width: 100%;
+   background-color: orange;
+   position: absolute;
+   left: 0;
+   top: -100%;
+   transition: all ease 0.2s;
+ }
+
+ .elem:hover .overlay{
+   top:0;
+ }
+
+
+
+ #fixed-image{
+    height: 30vw;
+    width: 24vw;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+ }
+
+/* #page4{
+   height: 50vh;
+   width: 100%;
+   background-color: #efeae3;
+} */
+
+#page5{
+   height: 115vh;  /*115vh*/
+   width: 100%;
+}
+
+#cursor{
+   height: 15px;
+   width: 15px;
+   background-color: #fe320a;
+   border-radius: 50%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 999;
+   pointer-events: none;
+   transition: transform 0.1s ease;
+}
+
+#footer{
+   position: fixed;
+   z-index: 9;
+   height: 100vh;
+   width: 100%;
+   color: white;
+   background-color: black;
+   bottom: 0;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-end;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+#footer h1{
+   font-size: 23vw;
+   margin: 0;
+   padding: 0;
+   line-height: 1;
+   width: 100%;
+   text-align: left;
+   padding-left: 2vw;
+}
+
+#footer-div{
+   height: 60vh; /*40*/
+   width: 100%;
+   background-color: #fe320a;
+}
+
