@@ -27,4 +27,4 @@ HTML | CSS | JavaScript | Locomotive.js | GSAP
 - Modern UI/UX design patterns
 
 ## 👤 Author
-Gobind Kumar | gobind2124@gmail.com
+Gobind Kumar | gobind1721@gmail.com
